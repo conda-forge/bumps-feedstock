@@ -1,5 +1,5 @@
 {% set name = "bumps" %}
-{% set version = "0.7.12" %}
+{% set version = "0.7.13" %}
 
 package:
   name: "{{ name|lower }}"
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 02547ffe921813eb0ba43dc88c01c9b47ba9d8e06dbe395c6e0f44cf97291529
+  sha256: fdcf335b800d892edfdbc87fdd539cb45166d8667edbec3dfbb1a3b5c3a35547
   patches:
     - scripts.patch # use entry points instead of installing scripts
 
