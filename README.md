@@ -5,11 +5,13 @@ Home: http://www.reflectometry.org/danse/software.html
 
 Package license: PUBLIC-DOMAIN
 
-Feedstock license: BSD 3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/bumps-feedstock/blob/master/LICENSE.txt)
 
 Summary: Data fitting with bayesian uncertainty analysis
 
+Development: https://github.com/bumps/bumps
 
+Documentation: https://bumps.readthedocs.io/en/latest/
 
 Current build status
 ====================
