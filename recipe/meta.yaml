@@ -20,11 +20,11 @@ build:
 
 requirements:
   host:
+    - python >=3.6
     - pip
-    - python
     - six
   run:
-    - python
+    - python >=3.6
     - six
     - numpy
     - scipy
