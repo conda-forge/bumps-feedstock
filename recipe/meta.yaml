@@ -1,5 +1,5 @@
 {% set name = "bumps" %}
-{% set version = "0.8.0" %}
+{% set version = "0.9.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 9f92c05effd8175763799d19ca55592e89b053318f611148a6725159aea41d67
+  sha256: 058f6483492c29fae9420b25d5a0c3249fb328999446ac13b4ac65213c6c7bea
   patches:
     - scripts.patch # use entry points instead of installing scripts
 
@@ -41,7 +41,7 @@ test:
 
 about:
   home: http://www.reflectometry.org/danse/software.html
-  license: PUBLIC-DOMAIN
+  license: CC-PDDC
   summary: Data fitting with bayesian uncertainty analysis
   doc_url: https://bumps.readthedocs.io/en/latest/
   dev_url: https://github.com/bumps/bumps
@@ -49,3 +49,5 @@ about:
 extra:
   recipe-maintainers:
     - tschoonj
+    - bmaranville
+    - mrakitin
