@@ -26,7 +26,7 @@ requirements:
   run:
     - python >=3.6
     - six
-    - numpy <1.24
+    - numpy
     - scipy
 
 test:
@@ -37,7 +37,6 @@ test:
     - bumps.mystic
     - bumps.mystic.examples
     - bumps.mystic.optimizer
-    - bumps.numdifftools
 
 about:
   home: http://www.reflectometry.org/danse/software.html
