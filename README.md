@@ -3,7 +3,7 @@ About bumps-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/bumps-feedstock/blob/main/LICENSE.txt)
 
-Home: http://www.reflectometry.org/danse/software.html
+Home: https://github.com/bumps/bumps
 
 Package license: CC-PDDC
 
