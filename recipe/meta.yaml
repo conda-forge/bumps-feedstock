@@ -22,10 +22,8 @@ requirements:
   host:
     - python >=3.6
     - pip
-    - six
   run:
     - python >=3.6
-    - six
     - numpy
     - scipy
 
