@@ -1,11 +1,11 @@
 diff --git a/setup.py b/setup.py
-index f27cfd2..0ce13f8 100755
+index 4f52dd0..429eeaa 100755
 --- a/setup.py
 +++ b/setup.py
 @@ -26,7 +26,6 @@ packages = find_packages(exclude=['amqp_map', 'fit_functions', 'jobqueue'])
  #dependency_check('numpy>=1.0', 'scipy>=0.6', 'matplotlib>=1.0', 'wx>=2.8.9')
  # print bumps.package_data()
- 
+
 -scripts = ['bin/bumps.bat'] if os.name == 'nt' else ['bin/bumps']
  #sys.dont_write_bytecode = False
  dist = setup(
@@ -15,6 +15,6 @@ index f27cfd2..0ce13f8 100755
      packages=packages,
      package_data=gui_resources.package_data(),
 -    scripts=scripts,
-     install_requires=['six'],
+     install_requires=[],
+     #install_requires=['numpy>=1.0', 'scipy>=0.7.0', 'matplotlib>=1.0'],
      #install_requires = ['httplib2'],
- )
