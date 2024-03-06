@@ -39,7 +39,7 @@ test:
     - bumps.mystic.optimizer
 
 about:
-  home: http://www.reflectometry.org/danse/software.html
+  home: https://github.com/bumps/bumps
   license: CC-PDDC
   summary: Data fitting with bayesian uncertainty analysis
   doc_url: https://bumps.readthedocs.io/en/latest/
