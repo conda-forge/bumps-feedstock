@@ -1,5 +1,5 @@
 {% set name = "bumps" %}
-{% set version = "0.9.3" %}
+{% set version = "1.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,13 +7,13 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 3295298f7fe1b2392bb2ff88c7a0ae69d77a7698af580a81570052ca05ba530f
+  sha256: f9802af93f39de3352a2f48617c4d49d52afc92ff05bde73548a9125a6ebf12f
   patches:
     - scripts.patch # use entry points instead of installing scripts
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: '{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vvv '
   entry_points:
     - bumps = bumps.cli:main
