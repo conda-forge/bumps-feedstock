@@ -39,10 +39,10 @@ test:
   requires:
     - pytest  # testing framework
     - pytest-cov  # coverage reporting
-    - rsync
+  source_files:
+    - bumps # ensure that the bumps package is included in the test environment
   commands:
-    - rsync -a $RECIPE_DIR/../ $SRC_DIR/
-    - cd $SRC_DIR && pytest
+    - pytest bumps
   imports:
     - bumps
     - bumps.dream
