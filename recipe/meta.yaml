@@ -9,7 +9,6 @@ source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: f9802af93f39de3352a2f48617c4d49d52afc92ff05bde73548a9125a6ebf12f
   patches:
-    - scripts.patch # use entry points instead of installing scripts
 
 build:
   noarch: python
