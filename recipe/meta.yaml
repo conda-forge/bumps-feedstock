@@ -39,6 +39,7 @@ test:
   requires:
     - pytest  # testing framework
     - pytest-cov  # coverage reporting
+    - rsync
   commands:
     - rsync -a $RECIPE_DIR/../ $SRC_DIR/
     - cd $SRC_DIR && pytest
