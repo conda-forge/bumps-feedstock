@@ -40,9 +40,9 @@ test:
     - pytest  # testing framework
     - pytest-cov  # coverage reporting
   source_files:
-    - bumps # ensure that the bumps package is included in the test environment
+    - pyproject.toml # ensure that the bumps package is included in the test environment
   commands:
-    - pytest bumps
+    - pytest --pyargs bumps
   imports:
     - bumps
     - bumps.dream
