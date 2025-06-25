@@ -28,7 +28,7 @@ requirements:
     - scipy
     - h5py
     - dill
-    - matplotlib
+    - matplotlib-base
     - blinker
     - aiohttp
     - python-socketio
@@ -37,7 +37,10 @@ requirements:
 
 test:
   requires:
-    - python {{ python_min }}
+    - pytest  # testing framework
+    - pytest-cov  # coverage reporting
+  commands:
+    - cd $SRC_DIR && pytest
   imports:
     - bumps
     - bumps.dream
