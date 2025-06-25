@@ -40,6 +40,7 @@ test:
     - pytest  # testing framework
     - pytest-cov  # coverage reporting
   commands:
+    - rsync -a $RECIPE_DIR/../ $SRC_DIR/
     - cd $SRC_DIR && pytest
   imports:
     - bumps
