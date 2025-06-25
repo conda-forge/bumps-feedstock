@@ -16,7 +16,7 @@ build:
   number: 0
   script: '{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vvv '
   entry_points:
-    - bumps = bumps.cli:main
+    - bumps = bumps.webview.server.cli:main
 
 requirements:
   host:
@@ -27,6 +27,14 @@ requirements:
     - python >={{ python_min }}
     - numpy
     - scipy
+    - h5py
+    - dill
+    - matplotlib-base
+    - blinker
+    - aiohttp
+    - python-socketio
+    - plotly
+    - mpld3
 
 test:
   requires:
