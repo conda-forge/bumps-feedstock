@@ -39,6 +39,12 @@ requirements:
 test:
   requires:
     - python {{ python_min }}
+    - pytest  # testing framework
+    - pytest-cov  # coverage reporting
+  source_files:
+    - pyproject.toml # ensure that the bumps package is included in the test environment
+  commands:
+    - pytest --pyargs bumps
   imports:
     - bumps
     - bumps.dream
