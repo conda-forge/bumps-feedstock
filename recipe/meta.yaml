@@ -1,5 +1,5 @@
 {% set name = "bumps" %}
-{% set version = "0.9.3" %}
+{% set version = "1.0.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,15 +7,15 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 3295298f7fe1b2392bb2ff88c7a0ae69d77a7698af580a81570052ca05ba530f
+  sha256: fb3b12f2dadf0d160f0acc022cbb63b9ad6dea43b0bd73fe65e4c340fd237379
   patches:
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: '{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vvv '
   entry_points:
-    - bumps = bumps.cli:main
+    - bumps = bumps.webview.server.cli:main
 
 requirements:
   host:
@@ -26,10 +26,24 @@ requirements:
     - python >={{ python_min }}
     - numpy
     - scipy
+    - h5py
+    - dill
+    - matplotlib-base
+    - blinker
+    - aiohttp
+    - python-socketio
+    - plotly
+    - mpld3
 
 test:
   requires:
     - python {{ python_min }}
+    - pytest  # testing framework
+    - pytest-cov  # coverage reporting
+  source_files:
+    - pyproject.toml # ensure that the bumps package is included in the test environment
+  commands:
+    - pytest --pyargs bumps
   imports:
     - bumps
     - bumps.dream
