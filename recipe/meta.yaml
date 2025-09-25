@@ -1,5 +1,5 @@
 {% set name = "bumps" %}
-{% set version = "1.0.2" %}
+{% set version = "1.0.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 61f9c1035ac20f4e41e17392eb5d6a822e1a6f7c4aa18b35d3c9b0863fc8fac8
+  sha256: 3b9194a320e50745f667f3b7269acdde89a83810c886fd31aca7d44874e01a93
   patches:
 
 build:
