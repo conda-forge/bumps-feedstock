@@ -60,6 +60,7 @@ tests:
 
 about:
   license: CC-PDDC
+  license_file: LICENSE.txt
   summary: Data fitting with bayesian uncertainty analysis
   homepage: https://github.com/bumps/bumps
   repository: https://github.com/bumps/bumps
