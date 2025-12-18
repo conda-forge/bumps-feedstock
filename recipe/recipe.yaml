@@ -1,0 +1,72 @@
+context:
+  name: bumps
+  version: 1.0.2
+  python_min: "3.9"
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
+  sha256: 61f9c1035ac20f4e41e17392eb5d6a822e1a6f7c4aa18b35d3c9b0863fc8fac8
+
+build:
+  number: 0
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . --no-deps --ignore-installed -vvv
+  python:
+    entry_points:
+      - bumps = bumps.webview.server.cli:main
+
+requirements:
+  host:
+    - python ${{ python_min }}.*
+    - pip
+    - setuptools
+  run:
+    - python >=${{ python_min }}
+    - numpy
+    - scipy
+    - h5py
+    - dill
+    - matplotlib-base
+    - blinker
+    - aiohttp
+    - python-socketio
+    - plotly
+    - mpld3
+
+tests:
+  - python:
+      imports:
+        - bumps
+        - bumps.dream
+        - bumps.gui
+        - bumps.mystic
+        - bumps.mystic.examples
+        - bumps.mystic.optimizer
+  - files:
+      source:
+        - pyproject.toml
+    requirements:
+      run:
+        - python ${{ python_min }}.*
+        - pytest
+        - pytest-cov
+    script:
+      - pytest --pyargs bumps
+
+about:
+  license: CC-PDDC
+  summary: Data fitting with bayesian uncertainty analysis
+  homepage: https://github.com/bumps/bumps
+  repository: https://github.com/bumps/bumps
+  documentation: https://bumps.readthedocs.io/en/latest/
+
+extra:
+  recipe-maintainers:
+    - tschoonj
+    - bmaranville
+    - mrakitin
+
