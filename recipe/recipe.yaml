@@ -37,6 +37,7 @@ requirements:
     - mpld3
     - cloudpickle
     - msgpack-python
+    - uncertainties
 
 tests:
   - python:
