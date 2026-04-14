@@ -1,6 +1,6 @@
 context:
   name: bumps
-  version: 1.0.3
+  version: "1.0.4"
 
 package:
   name: ${{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
-  sha256: 3b9194a320e50745f667f3b7269acdde89a83810c886fd31aca7d44874e01a93
+  sha256: cb85fd1b93859ecbe7eefefba7399c51f56d9ff3a23e6a74128c30683271ff89
 
 build:
   number: 0
